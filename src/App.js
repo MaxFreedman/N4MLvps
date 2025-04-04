@@ -60,7 +60,7 @@ export default function App() {
             <h2 className="text-2xl font-bold text-blue-800 mb-4">Brief History</h2>
             <p className="mb-4">
               Got licensed in 2015 as part of my schools Ham Radio club licensing initiative, and then was club president for a few years, 
-              during which I completed an ARISS contact. Got my dad (<a href="https://www.qrz.com/db/W4BFZ/" className="text-blue-600 hover:text-blue-800 underline">W4BFZ</a>) into the hobby, 
+              during which I completed an ARISS contact. Got my dad (<a href="https://www.qrz.com/db/N9BF/" className="text-blue-600 hover:text-blue-800 underline">W4BFZ</a>) into the hobby, 
               and then after a brief hiatus I obtained my general class license in 2022, and most recently my Extra ticket at the 2023 Huntsville Hamfest.
             </p>
             <p className="mb-4">
@@ -68,25 +68,6 @@ export default function App() {
             </p>
           </section>
 
-          <section>
-            <h2 className="text-2xl font-bold text-blue-800 mb-4">Awards</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="shadow-md rounded-lg overflow-hidden">
-                <img 
-                  src="/hampages/n4ml/naqpssbaug24.png" 
-                  alt="NAQP SSB August 2024 Award" 
-                  className="w-full h-auto" 
-                />
-              </div>
-              <div className="shadow-md rounded-lg overflow-hidden">
-                <img 
-                  src="/hampages/n4ml/Screenshot_2025_02_26_104603.png.jpg" 
-                  alt="Ham Radio Award" 
-                  className="w-full h-auto" 
-                />
-              </div>
-            </div>
-          </section>
         </main>
 
         <footer className="mt-12 pt-4 border-t border-gray-300 text-sm text-gray-600">
