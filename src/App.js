@@ -67,12 +67,12 @@ function Home() {
 }
 
 // PJ2T Page Component
-function PJ2T() {
+function PJ2TYouth() {
   return (
     <section>
       <h2 className="text-2xl font-bold text-blue-800 mb-4">PJ2T 2025</h2>
       <p className="mb-4">
-        Details about the PJ2T 2025 DXpedition. This page will contain information about the upcoming PJ2T operation.
+        Details about the PJ2T 2025 Youth Contest Operation. This page will contain information about the upcoming PJ2T operation.
       </p>
       <p className="mb-4">
         Stay tuned for more information about this event. Planning is currently underway and more details will be posted as they become available.
@@ -178,7 +178,7 @@ export default function App() {
           <main className="space-y-8">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/pj2t" element={<PJ2T />} />
+              <Route path="/pj2tyouth" element={<PJ2TYouth />} />
               <Route path="/awards" element={<Awards />} />
               <Route path="/etc" element={<Etc />} />
             </Routes>
