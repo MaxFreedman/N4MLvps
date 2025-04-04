@@ -13,6 +13,26 @@ export default function App() {
         <header className="mb-8 border-b-2 border-blue-600 pb-4">
           <h1 className="text-3xl md:text-5xl font-bold text-blue-800">N4ML</h1>
           <p className="text-lg text-blue-600">Ham Radio Operator</p>
+
+          <nav className="mt-4">
+            <ul className="flex flex-wrap gap-4 md:gap-8">
+              <li>
+                <a href="#pj2t" className="font-medium text-blue-700 hover:text-blue-900 hover:underline">
+                  PJ2T 2025
+                </a>
+              </li>
+              <li>
+                <a href="#awards" className="font-medium text-blue-700 hover:text-blue-900 hover:underline">
+                  Awards/Contests
+                </a>
+              </li>
+              <li>
+                <a href="#etc" className="font-medium text-blue-700 hover:text-blue-900 hover:underline">
+                  ETC
+                </a>
+              </li>
+            </ul>
+          </nav>
         </header>
 
         <main className="space-y-8">
