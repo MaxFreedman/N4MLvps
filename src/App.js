@@ -154,9 +154,9 @@ export default function App() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/pj2t" 
+                  <NavLink to="/pj2tyouth" 
                     className={({ isActive }) => isActive ? activeClass : normalClass}>
-                    PJ2T 2025
+                    PJ2T Youth 2025
                   </NavLink>
                 </li>
                 <li>
