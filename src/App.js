@@ -19,8 +19,8 @@ function Home() {
         <div className="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-100">
           <h3 className="text-xl font-bold text-blue-700 mb-2">Latest Updates</h3>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Upcoming PJ2T Youth Contest Operation in 2025</li>
-            <li>Recent contest results and awards</li>
+            <li><a href="/pj2t-youth" className="text-blue-600 hover:underline">Upcoming PJ2T Youth Contest Operation in 2025</a></li>
+            <li><a href="/awards" className="text-blue-600 hover:underline">Recent contest results and awards</a></li>
           </ul>
         </div>
       </section>
@@ -35,8 +35,13 @@ function PJ2TYouth() {
       <section>
         <h2 className="text-2xl font-bold text-blue-800 mb-4">PJ2T 2025 Youth Contest Operation</h2>
         <p className="mb-4">
-          This page contains information about the upcoming PJ2T operation.
+          PJ2T will be QRV in the 2025 CQ WW SSB contest as a primarily youth team, a uniquety in M/M contest operations. See below for information on the youth team members, and also how to support the operation.
         </p>
+        <h2 className="text-2xl font-bold text-blue-800 mb-4">Support the Operation</h2>
+        <p className="mb-4">
+          If you would like to provide financial support for travel, station rental, and other costs, see the gofundme link below:
+        </p>
+        <a href="https://gofund.me/ec547f05" className="text-blue-600 hover:underline mb-4"> GoFundMe </a>
       </section>
 
       <section className="mt-8">
@@ -83,7 +88,7 @@ function PJ2TYouth() {
               <div className="text-gray-500">Image Placeholder</div>
             </div>
             <div className="p-4">
-              <h3 className="text-xl font-bold text-blue-800">Megan EI5LA/KI5LA</h3>
+              <h3 className="text-xl font-bold text-blue-800">Megan EI5LA</h3>
               <p className="text-gray-700 mb-2">18 years old</p>
               <p className="text-gray-700 mb-2">Previous activities:</p>
               <ul className="list-disc pl-5 mb-2 text-gray-700">
@@ -100,7 +105,7 @@ function PJ2TYouth() {
               <div className="text-gray-500">Image Placeholder</div>
             </div>
             <div className="p-4">
-              <h3 className="text-xl font-bold text-blue-800">Grace Papay K8LG</h3>
+              <h3 className="text-xl font-bold text-blue-800">Grace K8LG</h3>
               <p className="text-gray-700 mb-2">Age: 19</p>
               <p className="text-gray-700 mb-2">Previous stations/operations:</p>
               <ul className="list-disc pl-5 mb-2 text-gray-700">
@@ -116,14 +121,15 @@ function PJ2TYouth() {
               <div className="text-gray-500">Image Placeholder</div>
             </div>
             <div className="p-4">
-              <h3 className="text-xl font-bold text-blue-800">Max Freedman N4ML</h3>
+              <h3 className="text-xl font-bold text-blue-800">Max N4ML</h3>
               <p className="text-gray-700 mb-2">Age: 21</p>
               <p className="text-gray-700 mb-2">Operations:</p>
               <ul className="list-disc pl-5 mb-2 text-gray-700">
-                <li>N4ML@AA4NU SS SSB 2024 SOUHP</li>
-                <li>N4ML@K0EJ ARRL 10m SOHP 2024 Phone Only</li>
-                <li>N4ML@K4RO Jan NAQP SSB 2025 SOLP</li>
-                <li>W1HQ ARRL DX SSB 2025 M/S LP</li>
+                <li>N4ML@AA4NU ARRl SS SSB 2024</li>
+                <li>N4ML@K0EJ ARRL 10m 2024 </li>
+                <li>N4ML@K4RO Jan NAQP SSB 2025</li>
+                <li>W1HQ ARRL DX SSB 2025</li>
+                <li>WX1AW CQ WPX SSB 2025</li>
               </ul>
             </div>
           </div>
@@ -134,7 +140,7 @@ function PJ2TYouth() {
               <div className="text-gray-500">Image Placeholder</div>
             </div>
             <div className="p-4">
-              <h3 className="text-xl font-bold text-blue-800">Connor Black</h3>
+              <h3 className="text-xl font-bold text-blue-800">Connor W4IPC</h3>
               <p className="text-gray-700 mb-2">Age: 22</p>
               <p className="text-gray-700 mb-2">Previous operations and stations:</p>
               <ul className="list-disc pl-5 mb-2 text-gray-700">
@@ -145,6 +151,24 @@ function PJ2TYouth() {
           </div>
         </div>
       </section>
+      {/* Team Member 7 */}
+      <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 mt-8">
+        <div className="h-64 bg-gray-200 flex items-center justify-center">
+          <div className="text-gray-500">Image Placeholder</div>
+        </div>
+        <div className="p-4">
+          <h3 className="text-xl font-bold text-blue-800">Violetta KN2P</h3>
+          <p className="text-gray-700 mb-2">Age: 20</p>
+          <p className="text-gray-700 mb-2">Previous operations and stations:</p>
+          <ul className="list-disc pl-5 mb-2 text-gray-700">
+            <li>W3LPL CQWW SSB 2018</li>
+            <li>K3LR Team Exuberance CQ WPX SSB 2019</li>
+            <li>PJ2Y@PJ2T YDXA 2018</li>
+            <li>PJ2T CQWW SSB 2024</li>
+            <li>J62K CQ WPX SSB 2025</li>
+          </ul>
+        </div>
+      </div>
 
       <section className="mt-8">
         <h3 className="text-xl font-bold text-blue-700 mb-4">Operation Details</h3>
@@ -305,7 +329,7 @@ export default function App() {
         <main className="container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/pj2t-youth" element={<PJ2TYouth />} />
+            <Route path="/pj2tyouth" element={<PJ2TYouth />} />
             <Route path="/awards" element={<Awards />} />
             <Route path="/etc" element={<Etc />} />
           </Routes>
