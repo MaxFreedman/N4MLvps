@@ -19,7 +19,7 @@ function Home() {
         <div className="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-100">
           <h3 className="text-xl font-bold text-blue-700 mb-2">Latest Updates</h3>
           <ul className="list-disc pl-5 space-y-2">
-            <li><a href="/pj2t-youth" className="text-blue-600 hover:underline">Upcoming PJ2T Youth Contest Operation in 2025</a></li>
+            <li><a href="/pj2tyouth" className="text-blue-600 hover:underline">Upcoming PJ2T Youth Contest Operation in 2025</a></li>
             <li><a href="/awards" className="text-blue-600 hover:underline">Recent contest results and awards</a></li>
           </ul>
         </div>
