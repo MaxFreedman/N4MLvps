@@ -297,7 +297,7 @@ export default function App() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/pj2t-youth" className={({isActive}) => 
+                    <NavLink to="/pj2tyouth" className={({isActive}) => 
                       isActive ? "text-white font-bold border-b-2 border-white pb-1" : 
                       "text-blue-200 hover:text-white"
                     }>
