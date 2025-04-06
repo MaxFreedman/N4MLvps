@@ -19,8 +19,8 @@ function Home() {
         <div className="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-100">
           <h3 className="text-xl font-bold text-blue-700 mb-2">Latest Updates</h3>
           <ul className="list-disc pl-5 space-y-2">
-            <li><a href="/pj2tyouth" className="text-blue-600 hover:underline">Upcoming PJ2T Youth Contest Operation in 2025</a></li>
-            <li><a href="/awards" className="text-blue-600 hover:underline">Recent contest results and awards</a></li>
+            <li><NavLink to="/pj2tyouth" className="text-blue-600 hover:underline">Upcoming PJ2T Youth Contest Operation in 2025</NavLink></li>
+            <li><NavLink to="/awards" className="text-blue-600 hover:underline">Recent contest results and awards</NavLink></li>
           </ul>
         </div>
       </section>
@@ -151,6 +151,7 @@ function PJ2TYouth() {
           </div>
         </div>
       </section>
+      
       {/* Team Member 7 */}
       <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 mt-8">
         <div className="h-64 bg-gray-200 flex items-center justify-center">
@@ -166,19 +167,6 @@ function PJ2TYouth() {
             <li>PJ2Y@PJ2T YDXA 2018</li>
             <li>PJ2T CQWW SSB 2024</li>
             <li>J62K CQ WPX SSB 2025</li>
-          </ul>
-        </div>
-      </div>
-            {/* Other Team */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 mt-8">
-        <div className="h-64 bg-gray-200 flex items-center justify-center">
-          <div className="text-gray-500">Image Placeholder</div>
-        </div>
-        <div className="p-4">
-          <h3 className="text-xl font-bold text-blue-800">Violetta KN2P</h3>
-          <p className="text-gray-700 mb-2">Age: 20</p>
-          <p className="text-gray-700 mb-2">Previous operations and stations:</p>
-          <ul className="list-disc pl-5 mb-2 text-gray-700">
           </ul>
         </div>
       </div>
@@ -254,8 +242,11 @@ function Etc() {
           <div className="bg-white shadow-sm rounded-lg p-6 border border-gray-200">
             <h3 className="text-xl font-bold text-blue-700 mb-2">Resources</h3>
             <ul className="list-disc pl-5 text-gray-700">
+              <li><a href="https://www.arrl.org/" className="text-blue-600 hover:underline">ARRL</a></li>
+              <li><a href="https://www.contestcalendar.com/" className="text-blue-600 hover:underline">Contest Calendar</a></li>
             </ul>
           </div>
+        </div>
       </section>
     </>
   );
