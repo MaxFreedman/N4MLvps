@@ -180,6 +180,7 @@ function PJ2TYouth() {
           <h3 className="text-xl font-bold text-blue-800">Others</h3>
           <p className="text-gray-700 mb-2">James W7EY and Pim PC8M</p>
         </div>
+      </div>
 
       <section className="mt-8">
         <h3 className="text-xl font-bold text-blue-700 mb-4">Operation Details</h3>
