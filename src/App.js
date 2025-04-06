@@ -149,38 +149,38 @@ function PJ2TYouth() {
               </ul>
             </div>
           </div>
+          
+          {/* Team Member 7 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500">Image Placeholder</div>
+            </div>
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-blue-800">Violetta KN2P</h3>
+              <p className="text-gray-700 mb-2">Age: 20</p>
+              <p className="text-gray-700 mb-2">Previous operations and stations:</p>
+              <ul className="list-disc pl-5 mb-2 text-gray-700">
+                <li>W3LPL CQWW SSB 2018</li>
+                <li>K3LR Team Exuberance CQ WPX SSB 2019</li>
+                <li>PJ2Y@PJ2T YDXA 2018</li>
+                <li>PJ2T CQWW SSB 2024</li>
+                <li>J62K CQ WPX SSB 2025</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Team Member Others */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500">Image Placeholder</div>
+            </div>
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-blue-800">Others</h3>
+              <p className="text-gray-700 mb-2">James W7EY and Pim PC8M</p>
+            </div>
+          </div>
         </div>
       </section>
-      
-      {/* Team Member 7 */}
-      <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-        <div className="h-64 bg-gray-200 flex items-center justify-center">
-          <div className="text-gray-500">Image Placeholder</div>
-        </div>
-        <div className="p-4">
-          <h3 className="text-xl font-bold text-blue-800">Violetta KN2P</h3>
-          <p className="text-gray-700 mb-2">Age: 20</p>
-          <p className="text-gray-700 mb-2">Previous operations and stations:</p>
-          <ul className="list-disc pl-5 mb-2 text-gray-700">
-            <li>W3LPL CQWW SSB 2018</li>
-            <li>K3LR Team Exuberance CQ WPX SSB 2019</li>
-            <li>PJ2Y@PJ2T YDXA 2018</li>
-            <li>PJ2T CQWW SSB 2024</li>
-            <li>J62K CQ WPX SSB 2025</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Team Member Others */}
-      <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-        <div className="h-64 bg-gray-200 flex items-center justify-center">
-          <div className="text-gray-500">Image Placeholder</div>
-        </div>
-        <div className="p-4">
-          <h3 className="text-xl font-bold text-blue-800">Others</h3>
-          <p className="text-gray-700 mb-2">James W7EY and Pim PC8M</p>
-        </div>
-      </div>
 
       <section className="mt-8">
         <h3 className="text-xl font-bold text-blue-700 mb-4">Operation Details</h3>
