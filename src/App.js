@@ -169,6 +169,15 @@ function PJ2TYouth() {
           </ul>
         </div>
       </div>
+            {/* Other Team Members */}
+            <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 mt-8">
+        <div className="h-64 bg-gray-200 flex items-center justify-center">
+          <div className="text-gray-500">Image Placeholder</div>
+        </div>
+        <div className="p-4">
+          <h3 className="text-xl font-bold text-blue-800">James W7EY, Pim PC8M</h3>
+        </div>
+      </div>
 
       <section className="mt-8">
         <h3 className="text-xl font-bold text-blue-700 mb-4">Operation Details</h3>
@@ -241,22 +250,8 @@ function Etc() {
           <div className="bg-white shadow-sm rounded-lg p-6 border border-gray-200">
             <h3 className="text-xl font-bold text-blue-700 mb-2">Resources</h3>
             <ul className="list-disc pl-5 text-gray-700">
-              <li><a href="https://www.arrl.org/" className="text-blue-600 hover:underline">ARRL</a></li>
-              <li><a href="https://www.contestcalendar.com/" className="text-blue-600 hover:underline">Contest Calendar</a></li>
-              <li><a href="https://www.qrz.com/" className="text-blue-600 hover:underline">QRZ.com</a></li>
-              <li><a href="https://www.dxsummit.fi/" className="text-blue-600 hover:underline">DX Summit</a></li>
             </ul>
           </div>
-          
-          <div className="bg-white shadow-sm rounded-lg p-6 border border-gray-200">
-            <h3 className="text-xl font-bold text-blue-700 mb-2">Software & Tools</h3>
-            <ul className="list-disc pl-5 text-gray-700">
-              <li><a href="https://n1mm.hamdocs.com/" className="text-blue-600 hover:underline">N1MM Logger+</a></li>
-              <li><a href="https://www.dxlabsuite.com/" className="text-blue-600 hover:underline">DXLab Suite</a></li>
-              <li><a href="https://www.hrdlog.net/" className="text-blue-600 hover:underline">Ham Radio Deluxe</a></li>
-            </ul>
-          </div>
-        </div>
       </section>
     </>
   );
