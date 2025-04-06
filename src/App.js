@@ -171,6 +171,16 @@ function PJ2TYouth() {
         </div>
       </div>
 
+      {/* Team Member Others */}
+      <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 mt-8">
+        <div className="h-64 bg-gray-200 flex items-center justify-center">
+          <div className="text-gray-500">Image Placeholder</div>
+        </div>
+        <div className="p-4">
+          <h3 className="text-xl font-bold text-blue-800">Others</h3>
+          <p className="text-gray-700 mb-2">James W7EY and Pim PC8M</p>
+        </div>
+
       <section className="mt-8">
         <h3 className="text-xl font-bold text-blue-700 mb-4">Operation Details</h3>
         <p className="mb-4">
