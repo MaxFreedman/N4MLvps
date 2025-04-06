@@ -153,7 +153,7 @@ function PJ2TYouth() {
       </section>
       
       {/* Team Member 7 */}
-      <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 mt-8">
+      <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
         <div className="h-64 bg-gray-200 flex items-center justify-center">
           <div className="text-gray-500">Image Placeholder</div>
         </div>
@@ -172,7 +172,7 @@ function PJ2TYouth() {
       </div>
 
       {/* Team Member Others */}
-      <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 mt-8">
+      <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
         <div className="h-64 bg-gray-200 flex items-center justify-center">
           <div className="text-gray-500">Image Placeholder</div>
         </div>
