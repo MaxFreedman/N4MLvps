@@ -210,7 +210,7 @@ function Awards() {
               <li>Score: 1,234,567</li>
               <li>QSOs: 1,234</li>
               <li>Multipliers: 123</li>
-              <li>Rank: 5th in New England Division</li>
+              <li>Rank: 1st M/S LP New England Division</li>
             </ul>
           </div>
           
