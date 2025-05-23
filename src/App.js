@@ -35,7 +35,7 @@ function PJ2TYouth() {
       <section>
         <h2 className="text-2xl font-bold text-blue-800 mb-4">PJ2T 2025 Youth Contest Operation</h2>
         <p className="mb-4">
-          PJ2T will be QRV in the 2025 CQ WW SSB contest as a primarily youth team, a uniquety in M/M contest operations. See below for information on the youth team members, and also how to support the operation.
+          PJ2T will be QRV in the 2025 CQ WW SSB contest as a primarily youth team, a rarity in M/M contest operations. See below for information on the youth team members, and also how to support the operation.
         </p>
         <h2 className="text-2xl font-bold text-blue-800 mb-4">Support the Operation</h2>
         <p className="mb-4">
