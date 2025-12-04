@@ -224,6 +224,14 @@ function Bouvet() {
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60)
         });
+      } else {
+        // Expedition date has passed, set all values to 0
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        });
       }
     };
 
@@ -244,6 +252,7 @@ function Bouvet() {
         {/* Countdown Timer */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg shadow-lg mb-8">
           <h3 className="text-2xl font-bold mb-4 text-center">Countdown to 3Y0K</h3>
+          <p className="text-center text-blue-100 mb-4 text-sm">Note: Expedition date is placeholder - actual date TBA</p>
           <div className="grid grid-cols-4 gap-4 text-center">
             <div className="bg-white bg-opacity-20 p-4 rounded-lg">
               <div className="text-4xl font-bold">{timeLeft.days}</div>
@@ -281,101 +290,29 @@ function Bouvet() {
       <section className="mt-8">
         <h3 className="text-2xl font-bold text-blue-700 mb-6">Photo Gallery</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Photo Placeholder 1 */}
-          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-            <div className="h-64 bg-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center">
-                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="mt-2">Photo Coming Soon</p>
+          {[
+            { title: 'Bouvet Island Landscape', description: 'Stunning views of the remote island' },
+            { title: 'Expedition Team', description: 'The team preparing for the expedition' },
+            { title: 'Station Equipment', description: 'Radio equipment and antennas' },
+            { title: 'Operating Position', description: 'Inside the operating tent' },
+            { title: 'Wildlife', description: 'Local penguins and seals' },
+            { title: 'Sunset Over the Ocean', description: 'Beautiful Antarctic sunset' }
+          ].map((photo, index) => (
+            <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+              <div className="h-64 bg-gray-200 flex items-center justify-center">
+                <div className="text-gray-500 text-center">
+                  <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p className="mt-2">Photo Coming Soon</p>
+                </div>
+              </div>
+              <div className="p-4">
+                <h4 className="font-bold text-gray-800">{photo.title}</h4>
+                <p className="text-gray-600 text-sm">{photo.description}</p>
               </div>
             </div>
-            <div className="p-4">
-              <h4 className="font-bold text-gray-800">Bouvet Island Landscape</h4>
-              <p className="text-gray-600 text-sm">Stunning views of the remote island</p>
-            </div>
-          </div>
-
-          {/* Photo Placeholder 2 */}
-          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-            <div className="h-64 bg-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center">
-                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="mt-2">Photo Coming Soon</p>
-              </div>
-            </div>
-            <div className="p-4">
-              <h4 className="font-bold text-gray-800">Expedition Team</h4>
-              <p className="text-gray-600 text-sm">The team preparing for the expedition</p>
-            </div>
-          </div>
-
-          {/* Photo Placeholder 3 */}
-          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-            <div className="h-64 bg-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center">
-                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="mt-2">Photo Coming Soon</p>
-              </div>
-            </div>
-            <div className="p-4">
-              <h4 className="font-bold text-gray-800">Station Equipment</h4>
-              <p className="text-gray-600 text-sm">Radio equipment and antennas</p>
-            </div>
-          </div>
-
-          {/* Photo Placeholder 4 */}
-          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-            <div className="h-64 bg-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center">
-                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="mt-2">Photo Coming Soon</p>
-              </div>
-            </div>
-            <div className="p-4">
-              <h4 className="font-bold text-gray-800">Operating Position</h4>
-              <p className="text-gray-600 text-sm">Inside the operating tent</p>
-            </div>
-          </div>
-
-          {/* Photo Placeholder 5 */}
-          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-            <div className="h-64 bg-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center">
-                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="mt-2">Photo Coming Soon</p>
-              </div>
-            </div>
-            <div className="p-4">
-              <h4 className="font-bold text-gray-800">Wildlife</h4>
-              <p className="text-gray-600 text-sm">Local penguins and seals</p>
-            </div>
-          </div>
-
-          {/* Photo Placeholder 6 */}
-          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-            <div className="h-64 bg-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center">
-                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="mt-2">Photo Coming Soon</p>
-              </div>
-            </div>
-            <div className="p-4">
-              <h4 className="font-bold text-gray-800">Sunset Over the Ocean</h4>
-              <p className="text-gray-600 text-sm">Beautiful Antarctic sunset</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
