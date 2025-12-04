@@ -10,6 +10,16 @@ import "./App.css";
 // Configuration constants
 const EXPEDITION_DATE = '2026-01-15T00:00:00Z'; // Placeholder date for 3Y0K Bouvet DXpedition
 
+// Photo gallery data for Bouvet page
+const BOUVET_PHOTOS = [
+  { title: 'Bouvet Island Landscape', description: 'Stunning views of the remote island' },
+  { title: 'Expedition Team', description: 'The team preparing for the expedition' },
+  { title: 'Station Equipment', description: 'Radio equipment and antennas' },
+  { title: 'Operating Position', description: 'Inside the operating tent' },
+  { title: 'Wildlife', description: 'Local penguins and seals' },
+  { title: 'Sunset Over the Ocean', description: 'Beautiful Antarctic sunset' }
+];
+
 // Home/Main Page Component
 function Home() {
   return (
@@ -292,14 +302,7 @@ function Bouvet() {
       <section className="mt-8">
         <h3 className="text-2xl font-bold text-blue-700 mb-6">Photo Gallery</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { title: 'Bouvet Island Landscape', description: 'Stunning views of the remote island' },
-            { title: 'Expedition Team', description: 'The team preparing for the expedition' },
-            { title: 'Station Equipment', description: 'Radio equipment and antennas' },
-            { title: 'Operating Position', description: 'Inside the operating tent' },
-            { title: 'Wildlife', description: 'Local penguins and seals' },
-            { title: 'Sunset Over the Ocean', description: 'Beautiful Antarctic sunset' }
-          ].map((photo) => (
+          {BOUVET_PHOTOS.map((photo) => (
             <div key={photo.title} className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
               <div className="h-64 bg-gray-200 flex items-center justify-center">
                 <div className="text-gray-500 text-center">
