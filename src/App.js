@@ -19,7 +19,8 @@ function Home() {
         <div className="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-100">
           <h3 className="text-xl font-bold text-blue-700 mb-2">Latest Updates</h3>
           <ul className="list-disc pl-5 space-y-2">
-            <li><NavLink to="/pj2tyouth" className="text-blue-600 hover:underline">Upcoming PJ2T Youth Contest Operation in 2025</NavLink></li>
+            <li><NavLink to="/bouvet" className="text-blue-600 hover:underline">3Y0K Bouvet Island DXpedition - Coming Soon!</NavLink></li>
+            <li><NavLink to="/pj2tyouth" className="text-blue-600 hover:underline">PJ2T Youth Contest Operation - CQ WW SSB 2025 Results</NavLink></li>
             <li><NavLink to="/awards" className="text-blue-600 hover:underline">Recent contest results and awards</NavLink></li>
           </ul>
         </div>
@@ -33,15 +34,22 @@ function PJ2TYouth() {
   return (
     <>
       <section>
-        <h2 className="text-2xl font-bold text-blue-800 mb-4">PJ2T 2025 Youth Contest Operation</h2>
+        <h2 className="text-2xl font-bold text-blue-800 mb-4">PJ2T 2025 Youth Contest Operation - CQ WW SSB</h2>
         <p className="mb-4">
-          PJ2T will be QRV in the 2025 CQ WW SSB contest as a primarily youth team, a rarity in M/M contest operations. See below for information on the youth team members, and also how to support the operation.
+          PJ2T was QRV in the 2025 CQ WW SSB contest as a primarily youth team, a rarity in M/M contest operations. The operation has concluded successfully!
         </p>
-        <h2 className="text-2xl font-bold text-blue-800 mb-4">Support the Operation</h2>
+        <div className="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-100 mb-6">
+          <h3 className="text-xl font-bold text-blue-700 mb-2">Contest Results</h3>
+          <p className="mb-2">
+            Check out our 3830 post for full results and operation details:
+          </p>
+          <a href="https://3830scores.com/" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+            View 3830 Post
+          </a>
+        </div>
         <p className="mb-4">
-          If you would like to provide financial support for travel, station rental, and other costs, see the gofundme link below:
+          Thank you to everyone who supported this operation! Below you can see information about the youth team members who participated.
         </p>
-        <a href="https://gofund.me/ec547f05" className="text-blue-600 hover:underline mb-4"> GoFundMe </a>
       </section>
 
       <section className="mt-8">
@@ -192,6 +200,202 @@ function PJ2TYouth() {
   );
 }
 
+// Bouvet Page Component
+function Bouvet() {
+  // Countdown timer for 3Y0K DXpedition
+  // Setting the expedition date - adjust this to the actual date when known
+  const expeditionDate = React.useMemo(() => new Date('2026-01-15T00:00:00Z'), []); // Placeholder date
+  
+  const [timeLeft, setTimeLeft] = React.useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  React.useEffect(() => {
+    const calculateTimeLeft = () => {
+      const difference = expeditionDate - new Date();
+      
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, [expeditionDate]);
+
+  return (
+    <>
+      <section>
+        <h2 className="text-3xl font-bold text-blue-800 mb-4">3Y0K Bouvet Island DXpedition</h2>
+        <p className="mb-6 text-lg">
+          One of the most anticipated DXpeditions - Bouvet Island, one of the most remote locations on Earth!
+        </p>
+        
+        {/* Countdown Timer */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg shadow-lg mb-8">
+          <h3 className="text-2xl font-bold mb-4 text-center">Countdown to 3Y0K</h3>
+          <div className="grid grid-cols-4 gap-4 text-center">
+            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
+              <div className="text-4xl font-bold">{timeLeft.days}</div>
+              <div className="text-sm uppercase mt-2">Days</div>
+            </div>
+            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
+              <div className="text-4xl font-bold">{timeLeft.hours}</div>
+              <div className="text-sm uppercase mt-2">Hours</div>
+            </div>
+            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
+              <div className="text-4xl font-bold">{timeLeft.minutes}</div>
+              <div className="text-sm uppercase mt-2">Minutes</div>
+            </div>
+            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
+              <div className="text-4xl font-bold">{timeLeft.seconds}</div>
+              <div className="text-sm uppercase mt-2">Seconds</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Information Section */}
+        <div className="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-100 mb-8">
+          <h3 className="text-xl font-bold text-blue-700 mb-3">About the DXpedition</h3>
+          <p className="text-gray-700 mb-2">
+            Bouvet Island is one of the rarest DXCC entities and among the most challenging locations to activate. 
+            The 3Y0K DXpedition will bring this remote island to the airwaves.
+          </p>
+          <p className="text-gray-700">
+            Stay tuned for updates, schedules, and operating information as the expedition date approaches.
+          </p>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className="mt-8">
+        <h3 className="text-2xl font-bold text-blue-700 mb-6">Photo Gallery</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Photo Placeholder 1 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500 text-center">
+                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="mt-2">Photo Coming Soon</p>
+              </div>
+            </div>
+            <div className="p-4">
+              <h4 className="font-bold text-gray-800">Bouvet Island Landscape</h4>
+              <p className="text-gray-600 text-sm">Stunning views of the remote island</p>
+            </div>
+          </div>
+
+          {/* Photo Placeholder 2 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500 text-center">
+                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="mt-2">Photo Coming Soon</p>
+              </div>
+            </div>
+            <div className="p-4">
+              <h4 className="font-bold text-gray-800">Expedition Team</h4>
+              <p className="text-gray-600 text-sm">The team preparing for the expedition</p>
+            </div>
+          </div>
+
+          {/* Photo Placeholder 3 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500 text-center">
+                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="mt-2">Photo Coming Soon</p>
+              </div>
+            </div>
+            <div className="p-4">
+              <h4 className="font-bold text-gray-800">Station Equipment</h4>
+              <p className="text-gray-600 text-sm">Radio equipment and antennas</p>
+            </div>
+          </div>
+
+          {/* Photo Placeholder 4 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500 text-center">
+                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="mt-2">Photo Coming Soon</p>
+              </div>
+            </div>
+            <div className="p-4">
+              <h4 className="font-bold text-gray-800">Operating Position</h4>
+              <p className="text-gray-600 text-sm">Inside the operating tent</p>
+            </div>
+          </div>
+
+          {/* Photo Placeholder 5 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500 text-center">
+                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="mt-2">Photo Coming Soon</p>
+              </div>
+            </div>
+            <div className="p-4">
+              <h4 className="font-bold text-gray-800">Wildlife</h4>
+              <p className="text-gray-600 text-sm">Local penguins and seals</p>
+            </div>
+          </div>
+
+          {/* Photo Placeholder 6 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="text-gray-500 text-center">
+                <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="mt-2">Photo Coming Soon</p>
+              </div>
+            </div>
+            <div className="p-4">
+              <h4 className="font-bold text-gray-800">Sunset Over the Ocean</h4>
+              <p className="text-gray-600 text-sm">Beautiful Antarctic sunset</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Links Section */}
+      <section className="mt-8">
+        <h3 className="text-2xl font-bold text-blue-700 mb-4">More Information</h3>
+        <div className="bg-white shadow-sm rounded-lg p-6 border border-gray-200">
+          <p className="mb-4 text-gray-700">
+            For the latest updates, schedules, and information about the 3Y0K DXpedition, visit the official expedition website and follow their social media channels.
+          </p>
+          <div className="space-y-2">
+            <p className="text-gray-600">Official DXpedition Website (Coming Soon)</p>
+            <p className="text-gray-600">Online Logs and Schedules (Coming Soon)</p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 // Awards/Contests Page Component
 function Awards() {
   return (
@@ -298,6 +502,14 @@ export default function App() {
                     </NavLink>
                   </li>
                   <li>
+                    <NavLink to="/bouvet" className={({isActive}) => 
+                      isActive ? "text-white font-bold border-b-2 border-white pb-1" : 
+                      "text-blue-200 hover:text-white"
+                    }>
+                      Bouvet
+                    </NavLink>
+                  </li>
+                  <li>
                     <NavLink to="/pj2tyouth" className={({isActive}) => 
                       isActive ? "text-white font-bold border-b-2 border-white pb-1" : 
                       "text-blue-200 hover:text-white"
@@ -330,6 +542,7 @@ export default function App() {
         <main className="container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/bouvet" element={<Bouvet />} />
             <Route path="/pj2tyouth" element={<PJ2TYouth />} />
             <Route path="/awards" element={<Awards />} />
             <Route path="/etc" element={<Etc />} />
