@@ -7,6 +7,9 @@ import "./App.css";
  * Tailwind file is imported in App.css
  */
 
+// Configuration constants
+const EXPEDITION_DATE = '2026-01-15T00:00:00Z'; // Placeholder date for 3Y0K Bouvet DXpedition
+
 // Home/Main Page Component
 function Home() {
   return (
@@ -203,8 +206,7 @@ function PJ2TYouth() {
 // Bouvet Page Component
 function Bouvet() {
   // Countdown timer for 3Y0K DXpedition
-  // Setting the expedition date - adjust this to the actual date when known
-  const expeditionDate = React.useMemo(() => new Date('2026-01-15T00:00:00Z'), []); // Placeholder date
+  const expeditionDate = React.useMemo(() => new Date(EXPEDITION_DATE), []);
   
   const [timeLeft, setTimeLeft] = React.useState({
     days: 0,
@@ -297,8 +299,8 @@ function Bouvet() {
             { title: 'Operating Position', description: 'Inside the operating tent' },
             { title: 'Wildlife', description: 'Local penguins and seals' },
             { title: 'Sunset Over the Ocean', description: 'Beautiful Antarctic sunset' }
-          ].map((photo, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+          ].map((photo) => (
+            <div key={photo.title} className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
               <div className="h-64 bg-gray-200 flex items-center justify-center">
                 <div className="text-gray-500 text-center">
                   <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
