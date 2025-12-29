@@ -8,7 +8,7 @@ import "./App.css";
  */
 
 // Configuration constants
-const EXPEDITION_DATE = '2026-01-15T00:00:00Z'; // Placeholder date for 3Y0K Bouvet DXpedition
+const EXPEDITION_DATE = '2026-02-01T00:00:00Z'; // 3Y0K Bouvet Island DXpedition departure date
 
 // Photo gallery data for Bouvet page
 const BOUVET_PHOTOS = [
@@ -225,9 +225,12 @@ function Bouvet() {
     seconds: 0
   });
 
+  const [isExpeditionActive, setIsExpeditionActive] = React.useState(true);
+
   React.useEffect(() => {
     const calculateTimeLeft = () => {
-      const difference = expeditionDate - new Date();
+      const now = new Date();
+      const difference = expeditionDate - now;
       
       if (difference > 0) {
         setTimeLeft({
@@ -236,6 +239,7 @@ function Bouvet() {
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60)
         });
+        setIsExpeditionActive(true);
       } else {
         // Expedition date has passed, set all values to 0
         setTimeLeft({
@@ -244,6 +248,7 @@ function Bouvet() {
           minutes: 0,
           seconds: 0
         });
+        setIsExpeditionActive(false);
       }
     };
 
@@ -263,26 +268,34 @@ function Bouvet() {
         
         {/* Countdown Timer */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg shadow-lg mb-8">
-          <h3 className="text-2xl font-bold mb-4 text-center">Countdown to 3Y0K</h3>
-          <p className="text-center text-blue-100 mb-4 text-sm">Note: Expedition date is placeholder - actual date TBA</p>
-          <div className="grid grid-cols-4 gap-4 text-center">
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <div className="text-4xl font-bold">{timeLeft.days}</div>
-              <div className="text-sm uppercase mt-2">Days</div>
+          <h3 className="text-2xl font-bold mb-4 text-center text-white">
+            {isExpeditionActive ? 'Countdown to 3Y0K Departure' : '3Y0K Expedition'}
+          </h3>
+          <p className="text-center text-blue-100 mb-4 text-sm">Departure Date: February 1, 2026</p>
+          {isExpeditionActive ? (
+            <div className="grid grid-cols-4 gap-4 text-center">
+              <div className="bg-white bg-opacity-90 p-4 rounded-lg">
+                <div className="text-4xl font-bold text-blue-800">{timeLeft.days}</div>
+                <div className="text-sm uppercase mt-2 text-gray-700">Days</div>
+              </div>
+              <div className="bg-white bg-opacity-90 p-4 rounded-lg">
+                <div className="text-4xl font-bold text-blue-800">{timeLeft.hours}</div>
+                <div className="text-sm uppercase mt-2 text-gray-700">Hours</div>
+              </div>
+              <div className="bg-white bg-opacity-90 p-4 rounded-lg">
+                <div className="text-4xl font-bold text-blue-800">{timeLeft.minutes}</div>
+                <div className="text-sm uppercase mt-2 text-gray-700">Minutes</div>
+              </div>
+              <div className="bg-white bg-opacity-90 p-4 rounded-lg">
+                <div className="text-4xl font-bold text-blue-800">{timeLeft.seconds}</div>
+                <div className="text-sm uppercase mt-2 text-gray-700">Seconds</div>
+              </div>
             </div>
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <div className="text-4xl font-bold">{timeLeft.hours}</div>
-              <div className="text-sm uppercase mt-2">Hours</div>
+          ) : (
+            <div className="text-center text-xl text-white">
+              Expedition is currently active or has concluded. Check back for updates!
             </div>
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <div className="text-4xl font-bold">{timeLeft.minutes}</div>
-              <div className="text-sm uppercase mt-2">Minutes</div>
-            </div>
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <div className="text-4xl font-bold">{timeLeft.seconds}</div>
-              <div className="text-sm uppercase mt-2">Seconds</div>
-            </div>
-          </div>
+          )}
         </div>
 
         {/* Information Section */}
@@ -302,8 +315,8 @@ function Bouvet() {
       <section className="mt-8">
         <h3 className="text-2xl font-bold text-blue-700 mb-6">Photo Gallery</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {BOUVET_PHOTOS.map((photo) => (
-            <div key={photo.title} className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+          {BOUVET_PHOTOS.map((photo, index) => (
+            <div key={index} className="bg-grey shadow-md rounded-lg overflow-hidden border border-gray-200">
               <div className="h-64 bg-gray-200 flex items-center justify-center">
                 <div className="text-gray-500 text-center">
                   <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
