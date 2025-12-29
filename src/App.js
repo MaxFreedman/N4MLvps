@@ -267,11 +267,11 @@ function Bouvet() {
         </p>
         
         {/* Countdown Timer */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg shadow-lg mb-8">
-          <h3 className="text-2xl font-bold mb-4 text-center text-white">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg shadow-lg mb-8" style={{background: 'linear-gradient(to right, #2563eb, #1e40af)', color: 'white'}}>
+          <h3 className="text-2xl font-bold mb-4 text-center text-white" style={{color: 'white'}}>
             {isExpeditionActive ? 'Countdown to 3Y0K Departure' : '3Y0K Expedition'}
           </h3>
-          <p className="text-center text-blue-100 mb-4 text-sm">Departure Date: February 1, 2026</p>
+          <p className="text-center text-blue-100 mb-4 text-sm" style={{color: '#dbeafe'}}>Departure Date: February 1, 2026</p>
           {isExpeditionActive ? (
             <div className="grid grid-cols-4 gap-4 text-center">
               <div className="bg-white bg-opacity-90 p-4 rounded-lg">
